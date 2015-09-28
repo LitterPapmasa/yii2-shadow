@@ -1,0 +1,1046 @@
+2015-08-29 08:48:05 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(206): yii\db\Connection->getSlavePdo()
+#5 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(819): yii\db\Command->prepare(true)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(349): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('tbl_wifi')
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(294): yii\db\Schema->getTableSchema('tbl_wifi')
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#12 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2-gii/generators/crud/Generator.php(144): yii\db\ActiveRecord::primaryKey()
+#13 [internal function]: yii\gii\generators\crud\Generator->validateModelClass('modelClass', NULL)
+#14 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'modelClass', NULL)
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/Validator.php(240): yii\validators\InlineValidator->validateAttribute(Object(yii\gii\generators\crud\Generator), 'modelClass')
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Model.php(351): yii\validators\Validator->validateAttributes(Object(yii\gii\generators\crud\Generator), Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2-gii/controllers/DefaultController.php(43): yii\base\Model->validate()
+#18 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#19 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#20 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#21 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('view', Array)
+#22 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('gii/default/vie...', Array)
+#23 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#25 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(206): yii\db\Connection->getSlavePdo()
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(819): yii\db\Command->prepare(true)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(349): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('tbl_wifi')
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(294): yii\db\Schema->getTableSchema('tbl_wifi')
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2-gii/generators/crud/Generator.php(144): yii\db\ActiveRecord::primaryKey()
+#11 [internal function]: yii\gii\generators\crud\Generator->validateModelClass('modelClass', NULL)
+#12 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'modelClass', NULL)
+#13 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/Validator.php(240): yii\validators\InlineValidator->validateAttribute(Object(yii\gii\generators\crud\Generator), 'modelClass')
+#14 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Model.php(351): yii\validators\Validator->validateAttributes(Object(yii\gii\generators\crud\Generator), Array)
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2-gii/controllers/DefaultController.php(43): yii\base\Model->validate()
+#16 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#18 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#19 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('view', Array)
+#20 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('gii/default/vie...', Array)
+#21 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#23 {main}
+Additional Information:
+
+2015-08-29 08:48:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_POST = [
+    '_csrf' => 'SThKNHpUdTYoUQEBHQAxewZVcgcCGDduD1QfcTwSQmx7ABpmNGEjfg=='
+    'Generator' => [
+        'modelClass' => 'backend\\models\\Wifi'
+        'searchModelClass' => 'backend\\models\\WifiSearch'
+        'controllerClass' => 'backend\\controllers\\WifiController'
+        'viewPath' => '@app/views/wifi'
+        'baseControllerClass' => 'yii\\web\\Controller'
+        'indexWidgetType' => 'grid'
+        'enableI18N' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+    'preview' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => 'bb91689c1a237c9041615313004b723ccebf796a05eb426ea47b59fac0f23068a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"aiK5gTDMOm83xLBXFlUEFF7Z28PRN5VH\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '492'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://study'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=bb91689c1a237c9041615313004b723ccebf796a05eb426ea47b59fac0f23068a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22aiK5gTDMOm83xLBXFlUEFF7Z28PRN5VH%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '36796'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440838085.777
+    'REQUEST_TIME' => 1440838085
+]
+2015-08-29 08:50:36 [127.0.0.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'date_create' cannot be null' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php:771
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(771): PDOStatement->execute()
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Schema.php(415): yii\db\Command->execute()
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(457): yii\db\Schema->insert('tbl_wifi', Array)
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(422): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(589): yii\db\ActiveRecord->insert(true, NULL)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(65): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\WifiController->actionCreate()
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('create', Array)
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi/create', Array)
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'date_create' cannot be null
+The SQL being executed was: INSERT INTO `tbl_wifi` (`ssid`, `pass`, `dev_login`, `dev_pass`, `reboot_url`, `date_create`, `show`) VALUES ('AGL-WiFi', 'KOAUSDYIOU', 'root', '79zemlya!', 'http://safhiuschnl.com.ua', NULL, 'enable')' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Schema.php:595
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `tb...')
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Schema.php(415): yii\db\Command->execute()
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(457): yii\db\Schema->insert('tbl_wifi', Array)
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(422): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(589): yii\db\ActiveRecord->insert(true, NULL)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(65): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\WifiController->actionCreate()
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('create', Array)
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi/create', Array)
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'date_create' cannot be null
+)
+
+2015-08-29 08:50:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi/create'
+]
+
+$_POST = [
+    '_csrf' => 'S0Q0c0xvbmQqLX9GKzsqKQQpDEA0Iyw8DShhNgopWT55fGQhAlo4LA=='
+    'Wifi' => [
+        'ssid' => 'AGL-WiFi'
+        'pass' => 'KOAUSDYIOU'
+        'dev_login' => 'root'
+        'dev_pass' => '79zemlya!'
+        'reboot_url' => 'http://safhiuschnl.com.ua'
+        'date_create' => ''
+        'show' => 'enable'
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => 'bb91689c1a237c9041615313004b723ccebf796a05eb426ea47b59fac0f23068a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"aiK5gTDMOm83xLBXFlUEFF7Z28PRN5VH\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '270'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://study'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=bb91689c1a237c9041615313004b723ccebf796a05eb426ea47b59fac0f23068a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22aiK5gTDMOm83xLBXFlUEFF7Z28PRN5VH%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '36832'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=wifi%2Fcreate'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440838236.869
+    'REQUEST_TIME' => 1440838236
+]
+2015-08-29 10:55:42 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\models\Wifi' in file: /home/litter/MEGA/domains/study/yii2/advanced/backend/models/Wifi.php. Namespace missing?' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\models\\...')
+#1 /home/litter/MEGA/domains/study/yii2/advanced/backend/models/WifiSearch.php(14): spl_autoload_call('backend\\models\\...')
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/BaseYii.php(288): include('/home/litter/ME...')
+#3 [internal function]: yii\BaseYii::autoload('backend\\models\\...')
+#4 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(35): spl_autoload_call('backend\\models\\...')
+#5 [internal function]: backend\controllers\WifiController->actionIndex()
+#6 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi', Array)
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#12 {main}
+2015-08-29 10:55:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '36996'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440845742.196
+    'REQUEST_TIME' => 1440845742
+]
+2015-08-29 11:03:47 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/index.php' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php:226
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, Object(backend\controllers\WifiController))
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('index', Array, Object(backend\controllers\WifiController))
+#2 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(41): yii\base\Controller->render('index', Array)
+#3 [internal function]: backend\controllers\WifiController->actionIndex()
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi', Array)
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2015-08-29 11:03:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37095'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440846226.988
+    'REQUEST_TIME' => 1440846226
+]
+2015-08-29 11:36:36 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1644
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1644): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', '/home/litter/ME...', 1644, Array)
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(755): yii\helpers\BaseHtml::renderSelectOptions(NULL, 'enable', Array)
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1604): yii\helpers\BaseHtml::dropDownList('Wifi[show]', NULL, 'enable', Array)
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1443): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(backend\models\Wifi), 'show', 'enable', Array)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/widgets/ActiveField.php(565): yii\helpers\BaseHtml::activeDropDownList(Object(backend\models\Wifi), 'show', 'enable', Array)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/_form.php(29): yii\widgets\ActiveField->dropDownList('enable', Array, Array)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, NULL)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/create.php(19): yii\base\View->render('_form', Array)
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#12 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, Object(backend\controllers\WifiController))
+#13 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\WifiController))
+#14 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(71): yii\base\Controller->render('create', Array)
+#15 [internal function]: backend\controllers\WifiController->actionCreate()
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#18 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('create', Array)
+#19 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi/create', Array)
+#20 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#22 {main}
+2015-08-29 11:36:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=wifi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37239'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi%2Fcreate'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440848196.339
+    'REQUEST_TIME' => 1440848196
+]
+2015-08-29 11:38:25 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'array_merge(): Argument #2 is not an array' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/widgets/ActiveField.php:563
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'array_merge(): ...', '/home/litter/ME...', 563, Array)
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/widgets/ActiveField.php(563): array_merge(Array, 'enable')
+#2 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/_form.php(29): yii\widgets\ActiveField->dropDownList(Object(backend\models\Wifi), 'enable', Array, Array)
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, NULL)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/create.php(19): yii\base\View->render('_form', Array)
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, Object(backend\controllers\WifiController))
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\WifiController))
+#11 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(71): yii\base\Controller->render('create', Array)
+#12 [internal function]: backend\controllers\WifiController->actionCreate()
+#13 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('create', Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi/create', Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#19 {main}
+2015-08-29 11:38:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=wifi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37273'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi%2Fcreate'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440848304.988
+    'REQUEST_TIME' => 1440848304
+]
+2015-08-29 11:38:42 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'array_merge(): Argument #2 is not an array' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/widgets/ActiveField.php:563
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'array_merge(): ...', '/home/litter/ME...', 563, Array)
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/widgets/ActiveField.php(563): array_merge(Array, 'Enable')
+#2 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/_form.php(29): yii\widgets\ActiveField->dropDownList(Object(backend\models\Wifi), 'Enable', Array, Array)
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, NULL)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/create.php(19): yii\base\View->render('_form', Array)
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, Object(backend\controllers\WifiController))
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\WifiController))
+#11 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(71): yii\base\Controller->render('create', Array)
+#12 [internal function]: backend\controllers\WifiController->actionCreate()
+#13 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('create', Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi/create', Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#19 {main}
+2015-08-29 11:38:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=wifi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37281'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi%2Fcreate'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440848322.962
+    'REQUEST_TIME' => 1440848322
+]
+2015-08-29 11:48:34 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: backend\models\Wifi::released_date' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(246): yii\base\Component->__get('released_date')
+#1 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/_form.php(27): yii\db\BaseActiveRecord->__get('released_date')
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, NULL)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/create.php(19): yii\base\View->render('_form', Array)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, Object(backend\controllers\WifiController))
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\WifiController))
+#10 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(71): yii\base\Controller->render('create', Array)
+#11 [internal function]: backend\controllers\WifiController->actionCreate()
+#12 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('create', Array)
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi/create', Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#18 {main}
+2015-08-29 11:48:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=wifi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37374'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi%2Fcreate'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440848914.881
+    'REQUEST_TIME' => 1440848914
+]
+2015-08-29 11:51:12 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'date() expects parameter 2 to be long, array given' in /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/_form.php:27
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'date() expects ...', '/home/litter/ME...', 27, Array)
+#1 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/_form.php(27): date('d-M-Y', Array)
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, NULL)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/create.php(19): yii\base\View->render('_form', Array)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#8 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, Object(backend\controllers\WifiController))
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\WifiController))
+#10 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(71): yii\base\Controller->render('create', Array)
+#11 [internal function]: backend\controllers\WifiController->actionCreate()
+#12 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('create', Array)
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi/create', Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#18 {main}
+2015-08-29 11:51:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=wifi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37420'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi%2Fcreate'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440849072.58
+    'REQUEST_TIME' => 1440849072
+]
+2015-08-29 11:51:37 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Array to string conversion' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:496
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(496): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/home/litter/ME...', 496, Array)
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1191): yii\helpers\BaseHtml::input('text', 'Wifi[date_creat...', Array, Array)
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1224): yii\helpers\BaseHtml::activeInput('text', Object(backend\models\Wifi), 'date_create', Array)
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/widgets/ActiveField.php(358): yii\helpers\BaseHtml::activeTextInput(Object(backend\models\Wifi), 'date_create', Array)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/_form.php(27): yii\widgets\ActiveField->textInput(Array)
+#5 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#6 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#7 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, NULL)
+#8 /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/create.php(19): yii\base\View->render('_form', Array)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/litter/ME...')
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/litter/ME...', Array)
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/litter/ME...', Array, Object(backend\controllers\WifiController))
+#12 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\WifiController))
+#13 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/WifiController.php(71): yii\base\Controller->render('create', Array)
+#14 [internal function]: backend\controllers\WifiController->actionCreate()
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('create', Array)
+#18 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wifi/create', Array)
+#19 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+2015-08-29 11:51:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=wifi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37426'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi%2Fcreate'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440849097.639
+    'REQUEST_TIME' => 1440849097
+]
+2015-08-29 11:53:21 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function now()' in /home/litter/MEGA/domains/study/yii2/advanced/backend/views/wifi/_form.php:27
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-08-29 11:53:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'wifi/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=wifi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2; _csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37478'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=wifi%2Fcreate'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=wifi%2Fcreate'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440849201.897
+    'REQUEST_TIME' => 1440849201
+]
+2015-08-29 11:57:29 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shadow.user' doesn't exist' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php:825
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(825): PDOStatement->execute()
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Query.php(243): yii\db\Command->queryOne()
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#5 /home/litter/MEGA/domains/study/yii2/advanced/common/models/User.php(82): yii\db\BaseActiveRecord::findOne(Array)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(73): common\models\User::findByUsername('litter')
+#7 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/Validator.php(240): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Model.php(351): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#12 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#13 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#18 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/login', Array)
+#19 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shadow.user' doesn't exist
+The SQL being executed was: SELECT * FROM `user` WHERE (`username`='litter') AND (`status`=10)' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Schema.php:595
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(840): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Query.php(243): yii\db\Command->queryOne()
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#5 /home/litter/MEGA/domains/study/yii2/advanced/common/models/User.php(82): yii\db\BaseActiveRecord::findOne(Array)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(73): common\models\User::findByUsername('litter')
+#7 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/Validator.php(240): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Model.php(351): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#12 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#13 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#18 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/login', Array)
+#19 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'shadow.user' doesn't exist
+)
+
+2015-08-29 11:57:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'c2VxMzdKNnYHHUhpVQluPho3NkkCHmw5GgY6QQQ4fTBBDRdKfxlnOw=='
+    'LoginForm' => [
+        'username' => 'litter'
+        'password' => '123'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/yii2/advanced/backend/web/index.php'
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '195'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://study'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => '_csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D; PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37525'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440849449.604
+    'REQUEST_TIME' => 1440849449
+]
+2015-08-29 16:45:26 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shadow.user' doesn't exist' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php:825
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(825): PDOStatement->execute()
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Query.php(243): yii\db\Command->queryOne()
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#5 /home/litter/MEGA/domains/study/yii2/advanced/common/models/User.php(82): yii\db\BaseActiveRecord::findOne(Array)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(73): common\models\User::findByUsername('litter')
+#7 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/Validator.php(240): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Model.php(351): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#12 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#13 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#18 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/login', Array)
+#19 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shadow.user' doesn't exist
+The SQL being executed was: SELECT * FROM `user` WHERE (`username`='litter') AND (`status`=10)' in /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Schema.php:595
+Stack trace:
+#0 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(840): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#2 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/Query.php(243): yii\db\Command->queryOne()
+#3 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#5 /home/litter/MEGA/domains/study/yii2/advanced/common/models/User.php(82): yii\db\BaseActiveRecord::findOne(Array)
+#6 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(73): common\models\User::findByUsername('litter')
+#7 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#9 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#10 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/validators/Validator.php(240): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#11 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Model.php(351): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#12 /home/litter/MEGA/domains/study/yii2/advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#13 /home/litter/MEGA/domains/study/yii2/advanced/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#18 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/login', Array)
+#19 /home/litter/MEGA/domains/study/yii2/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'shadow.user' doesn't exist
+)
+
+2015-08-29 16:45:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'bWROOXVtVmoZHHdjFy4OIgQ2CUNAOQwlBAcFS0YfHSxfDChAPT4HJw=='
+    'LoginForm' => [
+        'username' => 'litter'
+        'password' => '123'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM\";}'
+    'PHPSESSID' => 's4tpeau4ejq78oiltil7m1hqt2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'APPLICATION_ENV' => 'development'
+    'HTTP_HOST' => 'study'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '195'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://study'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://study/yii2/advanced/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6,uk;q=0.4'
+    'HTTP_COOKIE' => '_csrf=6aa93ee87205fc009a9e76d7c064b4eed056fc1991ed81c9a67884f73edf1ff2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tx9ZbCXHiRGz5TZOicKr3rKF2hfyHSQM%22%3B%7D; PHPSESSID=s4tpeau4ejq78oiltil7m1hqt2'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at study Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'study'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/litter/MEGA/domains/study'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/litter/MEGA/domains/study/yii2/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37875'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/yii2/advanced/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/yii2/advanced/backend/web/index.php'
+    'PHP_SELF' => '/yii2/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440866726.498
+    'REQUEST_TIME' => 1440866726
+]

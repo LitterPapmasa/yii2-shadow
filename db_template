@@ -1,0 +1,28 @@
+---Eq---
+eq_id *A
+bs_pass 
+eq_type  (MAC,PC,NB)
+eq_desc
+eq_inv
+change_date (curentTimeStamp)
+active default 1
+
+---companies---
+company_id
+company_name
+company_fullname
+
+---users---
+user_id
+fname
+lname *
+company_id *
+eq_id
+
+
+---devices---
+user_id
+dev_type (monitor, inkpad, printer, scaner)
+dev_inv
+dev_desc
+

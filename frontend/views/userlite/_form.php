@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'company')->dropDownList([ 'AGL' => 'AGL', 'MD' => 'MD', 'Pleon' => 'Pleon', 'Talan' => 'Talan', 'Clever' => 'Clever', 'MC' => 'MC', 'Visage' => 'Visage', 'CatMedia' => 'CatMedia', 'MadMedia' => 'MadMedia', 'NewMix' => 'NewMix', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'change_date')->textInput() ?>
+    <?= $form->field($model, 'change_date')->textInput(['value'=>date('Y-m-d h:m:s')]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

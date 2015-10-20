@@ -65,12 +65,23 @@ class EqController extends Controller
     {
         $model = new Eq();
         $users = new Userlite();
-        if ($model->load(Yii::$app->request->post()) && $users->load(Yii::$app->request->post())) {
-        	$users->user_id = $users->find()->max('user_id') + 1 ;
-        	$users->save();
-        	$model->user_id = $users->user_id;
+
+        if (Yii::$app->request->isAjax && $model->load($_POST) && $users($_POST)){
+            Yii::$app->response->format = 'json';
+
+            //return
+            echo \yii\widgets\ActiveForm::validate($model)." and ".\yii\widgets\ActiveForm::validate($users) ;
+            die;
+        }
+
+        if ($model->load(Yii::$app->request->post()) and $users->load(Yii::$app->request->post())) {
+
+            $users->user_id = $users->find()->max('user_id') + 1 ;
+            $model->user_id = $users->user_id;
+            $users->save();
         	$model->save();
-            return $this->redirect(['view', 'eq_id' => $model->eq_id, 'user_id' => $model->user_id]);
+
+        	return $this->redirect(['view', 'eq_id' => $model->eq_id, 'user_id' => $model->user_id]);
         } else {
             return $this->renderAjax('create', [
                 'model' => $model,
@@ -89,6 +100,7 @@ class EqController extends Controller
     public function actionUpdate($eq_id, $user_id)
     {
         $model = $this->findModel($eq_id, $user_id);
+
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'eq_id' => $model->eq_id, 'user_id' => $model->user_id]);

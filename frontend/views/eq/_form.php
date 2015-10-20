@@ -13,7 +13,9 @@ use frontend\models\Userlite;
 
 <div class="eq-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(); //['enableAjaxValidation' => true] ?>
+
+    <?= $form->field($model, 'bs_pass')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($users, 'fname')->textInput(['maxlength' => true]) ?>
 
@@ -21,17 +23,16 @@ use frontend\models\Userlite;
 
     <?= $form->field($users, 'company')->dropDownList([ 'AGL' => 'AGL', 'MD' => 'MD', 'Pleon' => 'Pleon', 'Talan' => 'Talan', 'Clever' => 'Clever', 'MC' => 'MC', 'Visage' => 'Visage', 'CatMedia' => 'CatMedia', 'MadMedia' => 'MadMedia', 'NewMix' => 'NewMix', ], ['prompt' => '']) ?>
 
-    <?= $form->field($users, 'change_date')->textInput(['value'=>date('Y-m-d h:m:s')])  ?>
 
 	<!-- Equipment form ------------------>
 
-    <?= $form->field($model, 'bs_pass')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'eq_type')->dropDownList([ 'PC' => 'PC', 'Mac' => 'Mac', 'iMac' => 'IMac', 'Monitor' => 'Monitor', 'Other' => 'Other', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'eq_desc')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'eq_inv')->textarea(['rows' => 3]) ?>
 
-    <?= $form->field($model, 'eq_inv')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'eq_desc')->textarea(['rows' => 3]) ?>
+
+    <?= $form->field($users, 'change_date')->textInput(['value'=>date('Y-m-d h:m:s')])  ?>
 
     <?php
 //     echo $form->field($model, 'user_id')->dropDownList(

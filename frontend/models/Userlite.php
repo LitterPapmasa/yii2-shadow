@@ -31,10 +31,11 @@ class Userlite extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'lname', 'company'], 'required'],
+            [['user_id', 'lname', 'company', 'change_date'], 'required'],
             [['user_id'], 'integer'],
             [['company'], 'string'],
-            [['change_date'], 'safe'],
+            //[['change_date'], 'safe'],
+            ['change_date', 'checkDate'],
             [['fname', 'lname'], 'string', 'max' => 64],
             [['user_id'], 'unique']
         ];
@@ -52,6 +53,17 @@ class Userlite extends \yii\db\ActiveRecord
             'company' => 'Company',
             'change_date' => 'Change Date',
         ];
+    }
+
+    public function checkDate($attribute, $params)
+    {
+        // a date next week
+        $nextWeek = date('Y-m-d', (time()+3600*24*7));
+        $selected = date($this->change_date);
+
+        if ($selected > $nextWeek) {
+            $this->addError($attribute, "The date can't be later than a week");
+        }
     }
 
     /**

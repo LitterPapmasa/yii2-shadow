@@ -9,7 +9,7 @@ $config = [
     		// DB connection
     		'db' => [
     				'class' => 'yii\db\Connection',
-    				'dsn' => 'mysql:host=localhost;dbname=shadow',
+    				'dsn' => 'mysql:host=localhost;dbname=shadow_v2',
     				'username' => 'root',
     				'password' => '1',
     				'charset' => 'utf8',

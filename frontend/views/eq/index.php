@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'class' => 'modalButton btn btn-success',
         ]) ?>
     </p>
-    
+
     <?php
         Modal::begin([
         	'class' => 'modal',
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ?>
     <div class="modalContent"></div>
     <?php Modal::end(); ?>
-    
+
     <?php Pjax::begin(); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -50,7 +50,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'user_fname',
                 'value' => 'user.fname',
             ],
-            [
+//             'user_id',
+        		[
                 'attribute' => 'user_id',
                 'value' => 'user.lname',
             ],
@@ -62,6 +63,22 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'Change Date',
                 'value' => 'user.change_date',
             ],
+            [
+            'class' => \flyiing\uni\grid\DataCombineColumn::className(),
+            'attributes' => [
+                'status' => [
+                    'value' => function($model) {
+                        return $model->statusLabel;
+                    },
+                    ],
+                    'logged_at' => ['format' => 'datetime'],
+                    ],
+                    ],
+                    [
+                        'class' => \flyiing\uni\grid\DataCombineColumn::className(),
+                        'format' => 'datetime',
+                        'attributes' => ['created_at', 'updated_at'],
+                    ],
 
             //'user_id',
 

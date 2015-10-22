@@ -5,6 +5,7 @@ use yii\helpers\Html;
 use \kartik\grid\GridView;
 use yii\helpers\ArrayHelper;
 use backend\models\Users;
+use backend\models\Equips;
 use yii\widgets\Pjax;
 
 
@@ -32,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
     'pjax'=>true,
     'striped'=>true,
     'hover'=>true,
-    'panel'=>['type'=>'primary', 'heading'=>'Grid Grouping Example'],
+    'panel'=>['type'=>'primary', 'heading'=>'Shadow list'],
     'columns'=>[
         ['class'=>'kartik\grid\SerialColumn'],
     	[
@@ -40,23 +41,23 @@ $this->params['breadcrumbs'][] = $this->title;
     			'width'=>'100px',
     			'group'=>true,
     			'subGroupOf'=>1
-    	],	
+    	],
         [
-            'attribute'=>'lname', 
+            'attribute'=>'lname',
             'width'=>'120px',
             'group'=>true,  // enable grouping
             'subGroupOf'=>1
         ],
-        
+
         [
-            'attribute'=>'company', 
+            'attribute'=>'company',
             'width'=>'200px',
-            'value'=>function ($model, $key, $index, $widget) { 
+            'value'=>function ($model, $key, $index, $widget) {
                 return $model->company;
             },
             'filterType'=>GridView::FILTER_SELECT2,
             //'filter'=>ArrayHelper::getValue($companies,'users.company'),
-            'filter'=>ArrayHelper::map(Users::find()->asArray()->all(), 'company', 'company'), 
+            'filter'=>ArrayHelper::map(Users::find()->asArray()->all(), 'company', 'company'),
             'filterWidgetOptions'=>[
                 'pluginOptions'=>['allowClear'=>true],
             ],
@@ -69,36 +70,67 @@ $this->params['breadcrumbs'][] = $this->title;
         	'width'=>'80px',
             'pageSummary'=>'Type',
             'pageSummaryOptions'=>['class'=>'text-right text-warning'],
+
         ],
         [
-            'attribute'=>'equips.eq_inv',
+            'attribute'=>'user_id',
             'width'=>'150px',
             'hAlign'=>'right',
            // 'format'=>['decimal', 2],
             'pageSummary'=>true,
-            'pageSummaryFunc'=>GridView::F_AVG
+            'pageSummaryFunc'=>GridView::F_AVG,
+        	'value' => function($data)
+        	{
+//         		var_dump($data->equips);
+//         		die;
+        		return $data->equips->eq_inv;
+        	},
+            'filter' =>	Html::tag(
+                'div',
+                Html::tag('div', Html::activeTextInput($searchEquips, 'eq_inv', ['class' => 'form-control']), 
+                		['class' => 'col-xs-6']),
+                		['class' => 'row']),
         ],
         [
             'attribute'=>'equips.eq_desc',
             'width'=>'150px',
             'hAlign'=>'right',
+
 //             'format'=>['decimal', 0],
 //             'pageSummary'=>true
         ],
         [
-        	'attribute'=>'date_create',
-        	'width'=>'160px',
-        	'hAlign'=>'right',
+        'attribute'=>'equips.eq_update',
+        'width'=>'150px',
+        'hAlign'=>'right',
+        'group'=>true,
+
         //             'format'=>['decimal', 0],
         //             'pageSummary'=>true
         ],
-        'date_create',
-        'user_status',
-        
+        [
+        'attribute'=>'date_create',
+        'width'=>'150px',
+        'hAlign'=>'right',
+        'group'=>true,
+        'subGroupOf'=>1
+        //             'format'=>['decimal', 0],
+        //             'pageSummary'=>true
+        ],
+        [
+        'attribute'=>'user_status',
+        'width'=>'50px',
+        'hAlign'=>'right',
+        'group'=>true,
+        'subGroupOf'=>1
+        //             'format'=>['decimal', 0],
+        //             'pageSummary'=>true
+        ],
+
 //         [
 //             'class'=>'kartik\grid\FormulaColumn',
 //             'header'=>'Amount In Stock',
-//             'value'=>function ($model, $key, $index, $widget) { 
+//             'value'=>function ($model, $key, $index, $widget) {
 //                 $p = compact('model', 'key', 'index');
 //                 return $widget->col(4, $p) * $widget->col(5, $p);
 //             },
@@ -109,9 +141,9 @@ $this->params['breadcrumbs'][] = $this->title;
 //             'pageSummary'=>true
 //         ],
     ],
-]);    
-    
+]);
+
     ?>
-      
+
 
 </div>

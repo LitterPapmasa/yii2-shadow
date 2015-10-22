@@ -55,7 +55,6 @@ class UsersSearch extends Users
         						'company' => SORT_ASC,
         				]
         	]
-        	//'sort' => ['attributes' => ['lname','fname','company','date_create']]
         ]);
 
         $this->load($params);

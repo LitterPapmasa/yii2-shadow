@@ -69,4 +69,5 @@ class Users extends \yii\db\ActiveRecord
     	return $this->hasOne(Equips::className(), ['user_id' => 'user_id']);
     }
     
+    
 }

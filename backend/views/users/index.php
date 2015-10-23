@@ -72,16 +72,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
         ],
         [
-            'attribute'=>'equips.eq_inv',
+            'attribute'=>'inventars',
+        	'value' => 'equips.eq_inv',
             'width'=>'150px',
             'hAlign'=>'right',
            // 'format'=>['decimal', 2],
-            'pageSummary'=>true,
-            'pageSummaryFunc'=>GridView::F_AVG,
-            'filter' =>	Html::tag(
-                'div',
-                Html::tag('div', Html::activeTextInput($searchEquips, 'eq_inv', ['class' => 'form-control']), ['class' => 'col-xs-6']),
-                ['class' => 'row']),
+//             'pageSummary'=>true,
+//             'pageSummaryFunc'=>GridView::F_AVG,
+//             'filter' =>	Html::tag(
+//                 'div',
+//                 Html::tag('div', Html::activeTextInput($searchEquips, 'eq_inv', ['class' => 'form-control']), ['class' => 'col-xs-6']),
+//                 ['class' => 'row']),
         ],
         [
             'attribute'=>'equips.eq_desc',

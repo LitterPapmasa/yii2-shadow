@@ -22,7 +22,7 @@ class UsersSearch extends Users
     {
         return [
             [[], 'integer'],
-            [['user_id','fname', 'lname', 'company', 'user_status', 'date_create'], 'safe'],
+            [['user_id','fname', 'lname', 'company', 'user_status', 'date_create', 'inventars'], 'safe'],
         ];
     }
 
@@ -45,7 +45,9 @@ class UsersSearch extends Users
     public function search($params)
     {
         $query = Users::find();
-
+	
+        $query->joinWith('equips');
+        
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         	'sort' => [
@@ -64,8 +66,6 @@ class UsersSearch extends Users
             // $query->where('0=1');
             return $dataProvider;
         }
-
-        $query->joinWith('equips');
         
         
         $query->andFilterWhere([
@@ -78,8 +78,7 @@ class UsersSearch extends Users
             ->andFilterWhere(['like', 'company', $this->company])
             
             ->andFilterWhere(['like', 'equips.eq_pass', $this->pass])
-//             ->andFilterWhere(['like', 'company', $this->company])
-//             ->andFilterWhere(['like', 'company', $this->company])
+            ->andFilterWhere(['like', 'tbl_equips.eq_inv', $this->inventars])
             ->andFilterWhere(['like', 'user_status', $this->user_status]);
 
         return $dataProvider;

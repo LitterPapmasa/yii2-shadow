@@ -5,7 +5,6 @@ use yii\helpers\Html;
 use \kartik\grid\GridView;
 use yii\helpers\ArrayHelper;
 use backend\models\Users;
-use backend\models\Equips;
 use yii\widgets\Pjax;
 
 
@@ -73,23 +72,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
         ],
         [
-            'attribute'=>'user_id',
+            'attribute'=>'equips.eq_inv',
             'width'=>'150px',
             'hAlign'=>'right',
            // 'format'=>['decimal', 2],
             'pageSummary'=>true,
             'pageSummaryFunc'=>GridView::F_AVG,
-        	'value' => function($data)
-        	{
-//         		var_dump($data->equips);
-//         		die;
-        		return $data->equips->eq_inv;
-        	},
             'filter' =>	Html::tag(
                 'div',
-                Html::tag('div', Html::activeTextInput($searchEquips, 'eq_inv', ['class' => 'form-control']), 
-                		['class' => 'col-xs-6']),
-                		['class' => 'row']),
+                Html::tag('div', Html::activeTextInput($searchEquips, 'eq_inv', ['class' => 'form-control']), ['class' => 'col-xs-6']),
+                ['class' => 'row']),
         ],
         [
             'attribute'=>'equips.eq_desc',
